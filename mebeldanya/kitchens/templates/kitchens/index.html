@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self';">
+    <meta charset="UTF-8">
+    <title>Главная - GUT</title>
+    <link rel="stylesheet" href="{% static 'kitchens/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'kitchens/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'kitchens/about.css' %}">
+    <link rel="stylesheet" href="{% static 'kitchens/reviews.css' %}">
+
+
+</head>
+<body>
+    <div class="sidebar">
+        <h1>GUT</h1>
+        <ul>
+            <li><a href="{% url 'kitchen_list' %}">Главная</a>
+            <li><a href="{% url 'catalog' %}">Каталог</a>
+            <li><a href="{% url 'about' %}">О нас</a>
+            <li><a href="{% url 'reviews' %}">Отзывы</a>
+            <li><a href="{% url 'contacts' %}">Контакты</a>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <section class="hero">
+            <video width="720" height="400" controls>
+                <source src="{% static 'kitchens/videos/kitchen-showcase.mp4' %}" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+            <h2>Идеальные кухни для вашего дома</h2>
+            <p>Создаём под ваш стиль, размер и мечту.</p>
+            <a href="{% url 'catalog' %}" class="btn">Посмотреть каталог</a>
+        </section>
+    </div>
+</body>
+</html>
