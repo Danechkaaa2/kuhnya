@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="{% static 'kitchens/contactS.css' %}">
+    <link rel="stylesheet" href="{% static 'kitchens/sidebar.css' %}">
+</head>
+<body>
+ <div class="sidebar">
+        <h1>GUT</h1>
+        <ul>
+            <li><a href="{% url 'kitchen_list' %}">Главная</a>
+            <li><a href="{% url 'catalog' %}">Каталог</a>
+            <li><a href="{% url 'about' %}">О нас</a>
+            <li><a href="{% url 'reviews' %}">Отзывы</a>
+            <li><a href="{% url 'contacts' %}">Контакты</a>
+        </ul>
+ </div>
+
+<div class="main-content">
+    <section class="card">
+        <h2>Контактная информация</h2>
+        <p><strong>Телефон:</strong> +7 (777) 123-45-67</p>
+        <p><strong>Email:</strong> <a href="mailto:info@gutkitchen.kz">info@gutkitchen.kz</a></p>
+        <p><strong>Адрес:</strong> г. Алматы, ул. Кухонная, 21</p>
+    </section>
+
+    <section class="card">
+        <h2>Юридическая информация</h2>
+        <p>Вы можете скачать юридический документ по ссылке ниже:</p>
+        <a href="{% static 'kitchens/docs/legal-info.pdf' %}" download class="btn">Скачать PDF</a>
+    </section>
+</div>
+
+<div class="clicker">
+    <h2>Попробуй кликер!</h2>
+    <p>Количество кликов: <span id="clickCount">0</span></p>
+    <button id="clickButton" class="clicker-btn">Нажми меня</button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    let count = 0;
+    const clickButton = document.getElementById('clickButton');
+    const clickCount = document.getElementById('clickCount');
+
+    clickButton.addEventListener('click', function() {
+      count++;
+      clickCount.textContent = count;
+    });
+  });
+</script>
+
+</body>
+</html>
