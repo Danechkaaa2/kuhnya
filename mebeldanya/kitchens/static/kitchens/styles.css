@@ -1,0 +1,184 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Контейнер */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Шапка */
+header {
+    background: #222;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Убрал ограничение */
+    max-width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+header h1 {
+    font-size: 37px; /* Увеличенный размер */
+    flex-grow: 1;
+    text-align: center; /* Центрируем заголовок */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px; /* Отступ между кнопками */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Герой-секция */
+.hero {
+    background-color: #444;
+    padding: 120px 20px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+}
+
+/* Кнопка */
+.btn {
+    background: #ff6600;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background: #e65c00;
+}
+
+/* Каталог кухонь */
+.kitchens {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.kitchens h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Подвал */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    width: 100%; /* Подвал теперь на всю ширину */
+}
+
+/* Центрируем кнопку "Контакты" */
+.footer-links {
+    text-align: center;
+    margin-top: 10px;
+}
+.footer-links a {
+    color: white; /* Белый цвет */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 18px; /* Размер текста, чтобы совпадал с остальными ссылками */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Добавляем подчеркивание при наведении */
+}
+
+.kitchen-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.kitchen-type {
+    flex: 1 1 30%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.kitchen-type img.kitchen-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.materials-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.materials-table th,
+.materials-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.materials-table th {
+    background: #f2f2f2;
+}
+.kitchen-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.kitchen-item {
+    width: 250px;
+    text-align: center;
+}
+
+.kitchen-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.photo-gallery img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
